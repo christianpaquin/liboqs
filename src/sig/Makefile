@@ -21,6 +21,7 @@ speed_sig: headers src/sig/speed_sig.c liboqs
 example_sig: headers src/sig/example_sig.c liboqs
 	$(CC) src/sig/example_sig.c liboqs.a -o example_sig $(CFLAGS) $(LDFLAGS)
 
+include src/sig/falcon/Makefile
 include src/sig/picnic/Makefile
 include src/sig/qtesla/Makefile
 # EDIT-WHEN-ADDING-SIG

@@ -8,6 +8,9 @@ char *OQS_SIG_alg_identifier(size_t i) {
 	// EDIT-WHEN-ADDING-SIG
 	char *a[OQS_SIG_algs_length] = {
 	    OQS_SIG_alg_default,
+	    OQS_SIG_alg_falcon_512,
+	    OQS_SIG_alg_falcon_768,
+	    OQS_SIG_alg_falcon_1024,
 	    OQS_SIG_alg_qTESLA_I,
 	    OQS_SIG_alg_qTESLA_III_size,
 	    OQS_SIG_alg_qTESLA_III_speed,
@@ -29,6 +32,24 @@ char *OQS_SIG_alg_identifier(size_t i) {
 OQS_SIG *OQS_SIG_new(const char *method_name) {
 	if (0 == strcasecmp(method_name, OQS_SIG_alg_default)) {
 		return OQS_SIG_new(OQS_SIG_DEFAULT);
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_falcon_512)) {
+#ifdef OQS_ENABLE_SIG_falcon_512
+		return OQS_SIG_falcon_512_new();
+#else
+		return NULL;
+#endif
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_falcon_768)) {
+#ifdef OQS_ENABLE_SIG_falcon_768
+		return OQS_SIG_falcon_768_new();
+#else
+		return NULL;
+#endif
+	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_falcon_1024)) {
+#ifdef OQS_ENABLE_SIG_falcon_1024
+		return OQS_SIG_falcon_1024_new();
+#else
+		return NULL;
+#endif
 	} else if (0 == strcasecmp(method_name, OQS_SIG_alg_qTESLA_I)) {
 #ifdef OQS_ENABLE_SIG_qTESLA_I
 		return OQS_SIG_qTESLA_I_new();

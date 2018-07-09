@@ -27,6 +27,7 @@
 
 /** Algorithm identifier for default SIG algorithm. */
 #define OQS_SIG_alg_default "DEFAULT"
+<<<<<<< HEAD
 /** Algorithm identifier for qTESLA_I */
 #define OQS_SIG_alg_qTESLA_I "qTESLA_I"
 /** Algorithm identifier for qTESLA_III_size */
@@ -37,6 +38,14 @@
 #define OQS_SIG_alg_qTESLA_p_I "qTESLA_p_I"
 /** Algorithm identifier for qTESLA_p_III */
 #define OQS_SIG_alg_qTESLA_p_III "qTESLA_p_III"
+=======
+/** Algorithm identifier for Falcon_512 */
+#define OQS_SIG_alg_falcon_512 "falcon_512"
+/** Algorithm identifier for Falcon_768 */
+#define OQS_SIG_alg_falcon_768 "falcon_768"
+/** Algorithm identifier for Falcon_1024 */
+#define OQS_SIG_alg_falcon_1024 "falcon_1024"
+>>>>>>> Add Falcon signature scheme
 /** Algorithm identifier for picnic_L1_FS */
 #define OQS_SIG_alg_picnic_L1_FS "picnic_L1_FS"
 /** Algorithm identifier for picnic_L1_UR */
@@ -52,7 +61,7 @@
 
 // EDIT-WHEN-ADDING-SIG
 /** Number of algorithm identifiers above (including default). */
-#define OQS_SIG_algs_length 12
+#define OQS_SIG_algs_length 15
 
 /**
  * Returns identifiers for available signature schemes in liboqs.  Used with OQS_SIG_new.
@@ -202,8 +211,9 @@ OQS_STATUS OQS_SIG_sign_open(const OQS_SIG *sig, uint8_t *message, size_t *messa
  */
 void OQS_SIG_free(OQS_SIG *sig);
 
-#include <oqs/sig_qtesla.h>
+#include <oqs/sig_falcon.h>
 #include <oqs/sig_picnic.h>
+#include <oqs/sig_qtesla.h>
 // EDIT-WHEN-ADDING-SIG
 
 #endif // __OQS_SIG_H

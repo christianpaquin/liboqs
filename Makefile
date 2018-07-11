@@ -13,9 +13,8 @@ KEMS_TO_ENABLE?=frodokem_640_aes frodokem_640_cshake frodokem_976_aes frodokem_9
 
 KEM_DEFAULT?=newhope_1024_cca_kem
 
-<<<<<<< HEAD
 SIGS_TO_ENABLE?=falcon_512 falcon_768 falcon_1024 \
-		qTESLA_I qTESLA_III_size qTESLA_III_speed qTESLA_p_I qTESLA_p_III # EDIT-WHENèADDING-SIG
+		qTESLA_I qTESLA_III_size qTESLA_III_speed qTESLA_p_I qTESLA_p_III # EDIT-WHEN-ADDING-SIG
 
 SIG_DEFAULT?=qTESLA_I
 

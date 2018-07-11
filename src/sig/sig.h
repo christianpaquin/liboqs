@@ -27,7 +27,12 @@
 
 /** Algorithm identifier for default SIG algorithm. */
 #define OQS_SIG_alg_default "DEFAULT"
-<<<<<<< HEAD
+/** Algorithm identifier for Falcon_512 */
+#define OQS_SIG_alg_falcon_512 "falcon_512"
+/** Algorithm identifier for Falcon_768 */
+#define OQS_SIG_alg_falcon_768 "falcon_768"
+/** Algorithm identifier for Falcon_1024 */
+#define OQS_SIG_alg_falcon_1024 "falcon_1024"
 /** Algorithm identifier for qTESLA_I */
 #define OQS_SIG_alg_qTESLA_I "qTESLA_I"
 /** Algorithm identifier for qTESLA_III_size */
@@ -38,14 +43,6 @@
 #define OQS_SIG_alg_qTESLA_p_I "qTESLA_p_I"
 /** Algorithm identifier for qTESLA_p_III */
 #define OQS_SIG_alg_qTESLA_p_III "qTESLA_p_III"
-=======
-/** Algorithm identifier for Falcon_512 */
-#define OQS_SIG_alg_falcon_512 "falcon_512"
-/** Algorithm identifier for Falcon_768 */
-#define OQS_SIG_alg_falcon_768 "falcon_768"
-/** Algorithm identifier for Falcon_1024 */
-#define OQS_SIG_alg_falcon_1024 "falcon_1024"
->>>>>>> Add Falcon signature scheme
 /** Algorithm identifier for picnic_L1_FS */
 #define OQS_SIG_alg_picnic_L1_FS "picnic_L1_FS"
 /** Algorithm identifier for picnic_L1_UR */
